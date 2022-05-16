@@ -1,0 +1,17 @@
+<!-- Usa el Componente Header que esta en Components Module -->
+<app-header></app-header>
+
+<ion-content>
+  <h1>Esta en la Pagina Sistemas expertos #1</h1>
+  <ion-button (click)="onClick()" expand="block"  shape="round">
+    Muestra Action-Dheet
+  </ion-button>
+
+ <!-- componente check-->
+ <ion-list>
+   <ion-item *ngFor="let item of data" (click) = "onCheck(item)"> 
+     <ion-label>Objecto check</ion-label>
+     <ion-checkbox slot="start" [color]="item.name"></ion-checkbox>
+   </ion-item>
+ </ion-list>   
+</ion-content>
